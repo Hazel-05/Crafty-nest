@@ -1,10 +1,217 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
-  <title>Welcome to Crafty-nest</title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>CRAFTY-NEST</title>
+  <style>
+    body {
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      margin: 0;
+      padding: 0;
+      background-color: #f5f0e1;
+      color: #4a3f35;
+    }
+    header {
+      background-color: #d2b48c;
+      color: #3e2c1c;
+      padding: 1.5rem;
+      text-align: center;
+    }
+    nav {
+      background-color: #e8dcc5;
+      padding: 1rem;
+      text-align: center;
+    }
+    nav a {
+      color: #4a3f35;
+      text-decoration: none;
+      margin: 0 1rem;
+      font-weight: bold;
+    }
+    nav a:hover {
+      text-decoration: underline;
+    }
+    main {
+      padding: 2rem;
+      max-width: 1200px;
+      margin: auto;
+    }
+    h1 {
+      font-size: 2.8rem;
+      margin-bottom: 0.5rem;
+    }
+    h2 {
+      font-size: 2rem;
+      margin-top: 2rem;
+    }
+    p {
+      font-size: 1.2rem;
+      line-height: 1.6;
+    }
+    .gallery {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+      gap: 1.5rem;
+      margin-top: 2rem;
+    }
+    .gallery-item {
+      text-align: center;
+    }
+    .gallery img {
+      width: 100%;
+      height: 200px;
+      object-fit: cover;
+      border-radius: 8px;
+      box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+      cursor: pointer;
+    }
+    .gallery-title {
+      margin-top: 0.5rem;
+      font-weight: bold;
+    }
+    .caption {
+      font-size: 1rem;
+      color: #333;
+      margin-top: 0.3rem;
+    }
+    footer {
+      background-color: #e8dcc5;
+      text-align: center;
+      padding: 1rem;
+      font-size: 0.9rem;
+      color: #6a5e4f;
+    }
+    .lightbox {
+      display: none;
+      position: fixed;
+      z-index: 999;
+      left: 0;
+      top: 0;
+      width: 100vw;
+      height: 100vh;
+      background: rgba(0, 0, 0, 0.8);
+      justify-content: center;
+      align-items: center;
+    }
+    .lightbox img {
+      max-width: 90%;
+      max-height: 90%;
+      border-radius: 8px;
+    }
+  </style>
 </head>
 <body>
-  <h1>Welcome to Crafty-nest!</h1>
-  <p>Your one-stop shop for authentic handmade crafts direct from artisans.</p>
+  <header>
+    <h1>CRAFTY-NEST</h1>
+    <p>Authentic Handmade Goods, Fairly Traded</p>
+  </header>
+  <nav>
+    <a href="#about">About</a>
+    <a href="#gallery">Gallery</a>
+    <a href="#impact">Impact</a>
+    <a href="#contact">Contact</a>
+  </nav>
+  <main>
+    <section id="about">
+      <p><strong>CRAFTY-NEST</strong> connects rural artisans with urban buyers. No middlemen. Just genuine handmade crafts at fair prices.</p>
+    </section>
+
+    <section id="gallery" class="gallery">
+      <h2>Our Art</h2>
+      <div class="gallery-item">
+        <img src="https://www.thisiscolossal.com/wp-content/uploads/2018/11/AnnaWhitehouse_02.jpg" alt="Potter at work">
+        <div class="gallery-title">Clay Pot</div>
+        <div class="caption">₹350</div>
+      </div>
+      <div class="gallery-item">
+        <img src="https://cpimg.tistatic.com/09604613/b/4/200x300cm-Large-Handwoven-Cream-Rug.jpg" alt="Weaver on Loom">
+        <div class="gallery-title">Handwoven Rug</div>
+        <div class="caption">₹1,200</div>
+      </div>
+      <div class="gallery-item">
+        <img src="https://5.imimg.com/data5/SELLER/Default/2022/3/XK/OA/NL/29581683/5368300a-351d-450f-a1d3-ba142050084e.jpeg" alt="Handcrafted Items">
+        <div class="gallery-title">Wooden Artifacts</div>
+        <div class="caption">₹850</div>
+      </div>
+      <div class="gallery-item">
+        <img src="https://i.etsystatic.com/23630426/r/il/757d43/6121955524/il_fullxfull.6121955524_rrdp.jpg" alt="Traditional Jewelry">
+        <div class="gallery-title">Ethnic Jewelry</div>
+        <div class="caption">₹600</div>
+      </div>
+      <div class="gallery-item">
+        <img src="https://altrove.in/cdn/shop/files/4_4cef2f9e-2903-41ad-94e4-d17789027aad.jpg?v=1720499474" alt="Woven Basket">
+        <div class="gallery-title">Wicker Basket</div>
+        <div class="caption">₹400</div>
+      </div>
+      <div class="gallery-item">
+        <img src="https://exclusivelane.com/cdn/shop/products/EL-018-032_A.jpg?v=1581672276" alt="Hand-painted Vase">
+        <div class="gallery-title">Hand-painted Vase</div>
+        <div class="caption">₹500</div>
+      </div>
+      <div class="gallery-item">
+        <img src="https://images.stockcake.com/public/0/4/8/048bdb4d-5860-4f24-976d-a3a5e294ed52_large/handmade-knitted-scarf-stockcake.jpg" alt="Knitted Scarves">
+        <div class="gallery-title">Knitted Scarves</div>
+        <div class="caption">₹650</div>
+      </div>
+      <div class="gallery-item">
+        <img src="https://imagescdn.jaypore.com/img/app/product/3/39733957-15349538.jpg" alt="Handcrafted Bells">
+        <div class="gallery-title">Brass Bells</div>
+        <div class="caption">₹300</div>
+      </div>
+      <div class="gallery-item">
+        <img src="https://cdn-image.blitzshopdeck.in/ShopdeckCatalogue/tr:f-webp,w-600,fo-auto/63d518da8163fe00122d8cbf/media/cQZ7_6of_1N907208MM_2023-09-06_1.jpg" alt="Macrame Decor">
+        <div class="gallery-title">Macrame Wall Hanging</div>
+        <div class="caption">₹950</div>
+      </div>
+      <div class="gallery-item">
+        <img src="https://5.imimg.com/data5/SELLER/Default/2022/9/ZR/PB/FQ/90045681/ladies-jute-hand-bag-500x500.jpg" alt="Hand-stitched Tote">
+        <div class="gallery-title">Hand-stitched Tote</div>
+        <div class="caption">₹550</div>
+      </div>
+    <div class="gallery-item">
+        <img src="https://m.media-amazon.com/images/I/61A--LKGFHL._AC_UF1000,1000_QL80_.jpg" alt="Hand-stitched vase">
+        <div class="gallery-title">Handmade Dolls</div>
+        <div class="caption">₹300</div>
+      </div>
+    </section>
+
+    <section id="impact">
+      <h2>Our Impact</h2>
+      <p>We have empowered over 500 artisans across 12 villages. With fair pricing and no middlemen, our initiative has boosted household incomes by up to 40% in these communities.</p>
+    </section>
+
+    <section id="contact">
+      <h2>Contact Us</h2>
+      <p>Email: info@crafty-nest.com</p>
+      <p>Instagram: @craftynest</p>
+      <p>Phone: +91-12345-67890</p>
+    </section>
+  </main>
+  <footer>
+    &copy; 2025 CRAFTY-NEST. All rights reserved.
+  </footer>
+  <div class="lightbox" id="lightbox">
+    <img src="" alt="Expanded View" id="lightbox-img">
+  </div>
+  <script>
+    const lightbox = document.getElementById('lightbox');
+    const lightboxImg = document.getElementById('lightbox-img');
+    const images = document.querySelectorAll('.gallery img');
+
+    images.forEach(img => {
+      img.addEventListener('click', () => {
+        lightboxImg.src = img.src;
+        lightboxImg.alt = img.alt;
+        lightbox.style.display = 'flex';
+      });
+    });
+
+    lightbox.addEventListener('click', () => {
+      lightbox.style.display = 'none';
+      lightboxImg.src = '';
+      lightboxImg.alt = '';
+    });
+  </script>
 </body>
 </html>
